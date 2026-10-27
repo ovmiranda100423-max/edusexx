@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EducSex Villa Victoria: educación sexual integral, prevención del embarazo adolescente y redes de apoyo juvenil.">
+    <title>EducSex Villa Victoria | Apoyo Juvenil</title>
+    <link rel="stylesheet" href="edusex.css">
+    <script src="edusex.js" defer></script>
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="logo"> EducSex</div>
+    <p>Villa Victoria · Plataforma de Concientización y Apoyo Juvenil</p>
+</header>
+
+<nav class="navegacion" aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#mitos">Mitos y realidades</a>
+    <a href="#salud">Centros de salud</a>
+    <a href="#chat">Chat de orientación</a>
+    <a href="#test">Test</a>
+    <a href="#apoyo">Redes de apoyo</a>
+</nav>
+
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero-contenido">
+            <span class="etiqueta">INFORMACIÓN · PREVENCIÓN · BIENESTAR</span>
+            <h1>Tu futuro importa, tu información también.</h1>
+            <p>
+                Un espacio educativo para jóvenes que buscan información
+                confiable sobre salud sexual, prevención del embarazo
+                adolescente y toma de decisiones responsables.
+            </p>
+            <a class="boton" href="#mitos">Comenzar a aprender</a>
+        </div>
+        <div class="hero-icono" aria-hidden="true">🌷</div>
+    </section>
+
+    <section class="seccion" id="mitos">
+        <div class="titulo-seccion">
+            <span>01 · APRENDE</span>
+            <h2>Mitos y realidades</h2>
+            <p>Conoce la diferencia entre los rumores y la información confiable.</p>
+        </div>
+
+        <div class="rejilla">
+            <article class="tarjeta">
+                <span class="numero">MITO 01</span>
+                <h3>La primera vez no puede ocurrir un embarazo.</h3>
+                <button class="boton boton-claro" data-mito="1"
+                    aria-expanded="false" aria-controls="realidad1">
+                    Descubrir realidad
+                </button>
+                <div class="respuesta" id="realidad1" hidden>
+                    <strong>Realidad:</strong> Sí puede ocurrir un embarazo
+                    desde la primera relación sexual si existe exposición
+                    a espermatozoides.
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <span class="numero">MITO 02</span>
+                <h3>Todos los anticonceptivos protegen contra las ITS.</h3>
+                <button class="boton boton-claro" data-mito="2"
+                    aria-expanded="false" aria-controls="realidad2">
+                    Descubrir realidad
+                </button>
+                <div class="respuesta" id="realidad2" hidden>
+                    <strong>Realidad:</strong> No todos protegen contra las
+                    infecciones de transmisión sexual. El condón reduce
+                    el riesgo de muchas ITS y también ayuda a prevenir embarazos.
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <span class="numero">MITO 03</span>
+                <h3>Hablar de sexualidad no sirve para prevenir riesgos.</h3>
+                <button class="boton boton-claro" data-mito="3"
+                    aria-expanded="false" aria-controls="realidad3">
+                    Descubrir realidad
+                </button>
+                <div class="respuesta" id="realidad3" hidden>
+                    <strong>Realidad:</strong> La educación sexual integral
+                    ayuda a comprender el cuerpo, reconocer límites y
+                    tomar decisiones informadas.
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <span class="numero">MITO 04</span>
+                <h3>Una persona embarazada adolescente debe ser juzgada.</h3>
+                <button class="boton boton-claro" data-mito="4"
+                    aria-expanded="false" aria-controls="realidad4">
+                    Descubrir realidad
+                </button>
+                <div class="respuesta" id="realidad4" hidden>
+                    <strong>Realidad:</strong> Toda persona merece respeto,
+                    atención médica, acompañamiento y oportunidades para
+                    continuar sus estudios.
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="seccion seccion-suave" id="salud">
+        <div class="titulo-seccion">
+            <span>02 · UBÍCATE</span>
+            <h2>Centros de salud cercanos</h2>
+            <p>Busca servicios de salud sexual y reproductiva en tu comunidad.</p>
+        </div>
+
+        <div class="panel">
+            <p>
+                Puedes buscar centros en Villa Victoria o permitir que el
+                navegador use tu ubicación para encontrar opciones cercanas.
+            </p>
+
+            <div class="acciones">
+                <button class="boton" id="btnUbicacion">
+                    📍 Usar mi ubicación
+                </button>
+                <a class="boton boton-secundario"
+                   href="https://www.google.com/maps/search/centros+de+salud+Villa+Victoria+Estado+de+Mexico/"
+                   target="_blank" rel="noopener noreferrer">
+                    Buscar en Google Maps
+                </a>
+            </div>
+
+            <p id="estadoUbicacion" class="mensaje-estado" role="status">
+                La ubicación solo se solicita si pulsas el botón.
+            </p>
+
+            <iframe
+                id="mapa"
+                title="Mapa de búsqueda de centros de salud en Villa Victoria"
+                src="https://maps.google.com/maps?q=centros%20de%20salud%20Villa%20Victoria%20Estado%20de%20Mexico&z=12&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <p class="nota">
+                Confirma con cada establecimiento su dirección, horario,
+                servicios y disponibilidad. El mapa no verifica esos datos.
+            </p>
+        </div>
+    </section>
+
+    <section class="seccion" id="chat">
+        <div class="titulo-seccion">
+            <span>03 · ORIÉNTATE</span>
+            <h2>Chat de orientación</h2>
+            <p>Haz preguntas generales sobre salud sexual y reproductiva.</p>
+        </div>
+
+        <div class="chat-panel">
+            <div class="aviso">
+                Este es un chatbot educativo automático, no una persona ni
+                un servicio de atención profesional. No escribas datos personales.
+            </div>
+
+            <div id="mensajes" class="mensajes" aria-live="polite"
+                aria-label="Mensajes del chat">
+                <div class="burbuja bot">
+                    ¡Hola! Soy EducSex. Puedo compartir información general
+                    sobre embarazo, anticoncepción, ITS y consentimiento.
+                </div>
+            </div>
+
+            <form id="formChat" class="form-chat">
+                <label for="preguntaChat">Tu pregunta</label>
+                <textarea id="preguntaChat" maxlength="500" rows="3"
+                    placeholder="Escribe aquí tu pregunta..."
+                    required></textarea>
+                <div class="acciones">
+                    <button class="boton" type="submit">Enviar</button>
+                    <button class="boton boton-claro" type="button"
+                        id="btnLimpiarChat">Limpiar chat</button>
+                </div>
+            </form>
+            <p class="nota">
+                Las respuestas se generan en tu navegador y no se envían
+                a un orientador.
+            </p>
+        </div>
+    </section>
+
+    <section class="seccion seccion-suave" id="test">
+        <div class="titulo-seccion">
+            <span>04 · COMPRUEBA</span>
+            <h2>Test de conocimientos</h2>
+            <p>Contesta las cinco preguntas y descubre tu resultado.</p>
+        </div>
+
+        <form id="formTest" class="panel">
+            <fieldset class="pregunta">
+                <legend>1. ¿Puede ocurrir un embarazo en la primera relación sexual?</legend>
+                <label><input type="radio" name="p1" value="a" required> No, nunca.</label>
+                <label><input type="radio" name="p1" value="b"> Sí, es posible.</label>
+                <label><input type="radio" name="p1" value="c"> Solo después de varias relaciones.</label>
+            </fieldset>
+
+            <fieldset class="pregunta">
+                <legend>2. ¿Qué método ayuda a reducir el riesgo de ITS?</legend>
+                <label><input type="radio" name="p2" value="a" required> El condón.</label>
+                <label><input type="radio" name="p2" value="b"> Un té.</label>
+                <label><input type="radio" name="p2" value="c"> Ninguna medida de protección.</label>
+            </fieldset>
+
+            <fieldset class="pregunta">
+                <legend>3. ¿Dónde puedes solicitar orientación médica?</legend>
+                <label><input type="radio" name="p3" value="a" required> Con personal de salud capacitado.</label>
+                <label><input type="radio" name="p3" value="b"> En rumores de internet.</label>
+                <label><input type="radio" name="p3" value="c"> En publicaciones sin fuentes.</label>
+            </fieldset>
+
+            <fieldset class="pregunta">
+                <legend>4. ¿Qué es el consentimiento?</legend>
+                <label><input type="radio" name="p4" value="a" required> Aceptar por miedo.</label>
+                <label><input type="radio" name="p4" value="b"> No poder cambiar de opinión.</label>
+                <label><input type="radio" name="p4" value="c"> Aceptar libremente y sin presión.</label>
+            </fieldset>
+
+            <fieldset class="pregunta">
+                <legend>5. ¿Qué debes hacer si tienes dudas sobre anticoncepción?</legend>
+                <label><input type="radio" name="p5" value="a" required> Buscar orientación confiable.</label>
+                <label><input type="radio" name="p5" value="b"> Creer cualquier rumor.</label>
+                <label><input type="radio" name="p5" value="c"> Evitar informarte.</label>
+            </fieldset>
+
+            <button type="submit" class="boton">Calificar respuestas</button>
+            <button type="reset" class="boton boton-claro">Repetir test</button>
+
+            <div id="resultadoTest" class="resultado" role="status"
+                aria-live="polite"></div>
+        </form>
+    </section>
+
+    <section class="seccion" id="apoyo">
+        <div class="titulo-seccion">
+            <span>05 · ENCUENTRA APOYO</span>
+            <h2>Redes de apoyo</h2>
+            <p>Consulta recursos institucionales para obtener información.</p>
+        </div>
+
+        <div class="rejilla">
+            <article class="tarjeta">
+                <h3>🏥 Servicios de salud</h3>
+                <p>Busca establecimientos que puedan brindar orientación médica.</p>
+                <a class="enlace" target="_blank" rel="noopener noreferrer"
+                   href="https://www.google.com/maps/search/centros+de+salud+Villa+Victoria+Estado+de+Mexico/">
+                    Encontrar servicios →
+                </a>
+            </article>
+
+            <article class="tarjeta">
+                <h3>💗 Secretaría de Salud</h3>
+                <p>Consulta información y recursos institucionales de salud.</p>
+                <a class="enlace" target="_blank" rel="noopener noreferrer"
+                   href="https://www.gob.mx/salud">
+                    Visitar portal →
+                </a>
+            </article>
+
+            <article class="tarjeta">
+                <h3>🫶 Apoyo y protección</h3>
+                <p>Si sufres violencia o estás en peligro, busca apoyo de una persona adulta de confianza o de servicios especializados.</p>
+                <a class="enlace" target="_blank" rel="noopener noreferrer"
+                   href="https://www.gob.mx/sipinna">
+                    Consultar SIPINNA →
+                </a>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="pie">
+    <h2>EducSex 📍Villa Victoria </h2>
+    <p>Proyecto Escolar Comunitario (PEC)</p>
+    <p>Aprender, prevenir y acompañar sin juzgar.</p>
+    <p class="nota">Material educativo. No sustituye la atención profesional.</p>
+</footer>
+
+</body>
+</html>
